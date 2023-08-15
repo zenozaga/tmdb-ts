@@ -18,12 +18,26 @@ import {
   TvSeasonsEndpoint,
   TvEpisodesEndpoint,
 } from './endpoints';
+import Instances from './instances';
+
+import Language from './types/languages';
+
 
 export class TMDB {
-  private readonly accessToken: string;
 
+  private readonly accessToken: string;
+ 
   constructor(accessToken: string) {
     this.accessToken = accessToken;
+  }
+
+
+  setLanguage(language: Language) {
+    Instances.put("language", language);
+  }
+
+  get language(): string {
+    return Instances.get<Language>("language") ?? Language.ENGLISH;
   }
 
   get account(): AccountEndpoint {
