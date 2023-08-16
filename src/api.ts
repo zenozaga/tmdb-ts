@@ -1,7 +1,7 @@
 import fetch from 'cross-fetch';
 import { parseOptions } from './utils';
 import Instances from './instances';
-import Language from './types/languages';
+import {Language} from './types/languages';
 
 const BASE_URL_V3 = 'https://api.themoviedb.org/3';
 
