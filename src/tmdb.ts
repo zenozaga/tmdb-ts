@@ -20,7 +20,7 @@ import {
 } from './endpoints';
 
 import Instances from './instances';
-import {Language} from './types/languages';
+import { Language } from './types/languages';
 
 
 export class TMDB {
