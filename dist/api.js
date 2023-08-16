@@ -33,7 +33,6 @@ class Api {
                 options = Object.assign(Object.assign({}, options), { language });
             }
             const params = (0, utils_1.parseOptions)(options);
-            console.log(`${BASE_URL_V3}${path}?${params}`);
             const response = yield (0, cross_fetch_1.default)(`${BASE_URL_V3}${path}?${params}`, {
                 method: 'GET',
                 headers: {
