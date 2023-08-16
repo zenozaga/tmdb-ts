@@ -15,14 +15,14 @@ export class Api {
     
     /// get store language
     const language = Instances.get<string>("language") ?? Language.ENGLISH;
-
-
-    /// check if language is not set
-    if(!Object.hasOwnProperty.call(options, "language")) {
-      options = {...options, language};
-    }
     
-    const params = parseOptions(options);
+    const opts = {
+      language,
+      ...(options ?? {})
+    };
+
+ 
+    const params = parseOptions(opts);
  
 
     const response = await fetch(`${BASE_URL_V3}${path}?${params}`, {

@@ -28,11 +28,8 @@ class Api {
         return __awaiter(this, void 0, void 0, function* () {
             /// get store language
             const language = (_a = instances_1.default.get("language")) !== null && _a !== void 0 ? _a : languages_1.Language.ENGLISH;
-            /// check if language is not set
-            if (!Object.hasOwnProperty.call(options, "language")) {
-                options = Object.assign(Object.assign({}, options), { language });
-            }
-            const params = (0, utils_1.parseOptions)(options);
+            const opts = Object.assign({ language }, (options !== null && options !== void 0 ? options : {}));
+            const params = (0, utils_1.parseOptions)(opts);
             const response = yield (0, cross_fetch_1.default)(`${BASE_URL_V3}${path}?${params}`, {
                 method: 'GET',
                 headers: {
