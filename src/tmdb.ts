@@ -18,9 +18,9 @@ import {
   TvSeasonsEndpoint,
   TvEpisodesEndpoint,
 } from './endpoints';
-import Instances from './instances';
 
-import Language from './types/languages';
+import Instances from './instances';
+import {Language} from './types/languages';
 
 
 export class TMDB {

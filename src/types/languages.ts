@@ -1,4 +1,4 @@
-enum Language {
+export enum Language {
     AFAR = 'aa',
     ABKHAZIAN = 'ab',
     AFRIKAANS = 'af',
@@ -44,4 +44,4 @@ enum Language {
 
  
 
-export default Language;
+ 
