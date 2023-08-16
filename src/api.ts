@@ -21,11 +21,9 @@ export class Api {
     if(!Object.hasOwnProperty.call(options, "language")) {
       options = {...options, language};
     }
-
-    
     
     const params = parseOptions(options);
-
+ 
 
     const response = await fetch(`${BASE_URL_V3}${path}?${params}`, {
       method: 'GET',
