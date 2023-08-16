@@ -1,3 +1,4 @@
+
 export * from './options';
 export * from './certification';
 export * from './credits';
@@ -16,6 +17,7 @@ export * from './keywords';
 export * from './collections';
 export * from './tv-episode';
 export * from './tv-seasons';
+export * from './languages';
 
 export type MediaType = 'movie' | 'tv' | 'person';
 
@@ -210,3 +212,5 @@ export interface Images {
   logos: Image[];
   posters: Image[];
 }
+
+
